@@ -161,18 +161,32 @@
     for (int i=0; i<[beacons count]; i++) {
         
         BubbleObject *bubbleObject = [BubbleObject new];
-//        Bubble *bubble = [Bubble new];
-        
+
         CLBeacon *beacon = [beacons objectAtIndex:i];
-        [bubbleObject setBeacon:beacon];
-        [bubbleObject setUuid:[beacon.major stringValue]];
-        [bubbleObject setColor:[colors objectAtIndex:i]];
         
-        [self.beaconDict setObject:bubbleObject forKey:beacon.major];
+        //if dictionary doesn't contain the found beacon add it.
+        //otherwise just update the beacon
+        if (!self.beaconDict[beacon.major]) {
+            
+            [bubbleObject setBeacon:beacon];
+            [bubbleObject setUuid:[beacon.major stringValue]];
+            
+            //add color but remove it from the list
+            [bubbleObject setColor:[colors lastObject]];
+            [self.colors removeObject:[colors lastObject]];
+            
+            //add beacon to dict
+            [self.beaconDict setObject:bubbleObject forKey:beacon.major];
+            
+        }else{
+            bubbleObject = [self.beaconDict objectForKey:beacon.major];
+            [bubbleObject setBeacon:beacon];
+            [self.beaconDict setObject:bubbleObject forKey:beacon.major];
+        }
         
         [self setDiameter:35.0];
         
-//        NSLog(@"%@", [self.beaconDict description]);
+        NSLog(@"%@", [self.beaconDict description]);
     }
     
     [self updateBeacons];
@@ -194,18 +208,18 @@
     
     __block int counter = 0;
     [self.beaconDict enumerateKeysAndObjectsUsingBlock: ^(id key, id obj, BOOL *stop) {
-        counter ++;
-        
-        BubbleObject *bubbleObject = obj;
-        NSLog(@"%@ %f", bubbleObject.uuid, self.view.frame.size.height/counter);
-        
-        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*counter, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:3 andColor:bubbleObject.color];
-        [self.view addSubview:self.drawing];
-        
-        
-        
-        
-        
+//        counter ++;
+//        
+//        BubbleObject *bubbleObject = obj;
+//        NSLog(@"%@ %f", bubbleObject.uuid, self.view.frame.size.height/counter);
+//        
+//        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*counter, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:3 andColor:bubbleObject.color];
+//        [self.view addSubview:self.drawing];
+//        
+//        
+//        
+//        
+//        
         
         
 //        float position = self.view.frame.size.height / bubbleObject.position;

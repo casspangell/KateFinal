@@ -157,8 +157,6 @@
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
 
-    
-
     for (int i=0; i<[beacons count]; i++) {
         
         BubbleObject *bubbleObject = [BubbleObject new];
@@ -188,8 +186,6 @@
             [self.beaconDict setObject:bubbleObject forKey:beacon.major];
         }
         
-        [self setDiameter:35.0];
-        
 //        NSLog(@"%@", [self.beaconDict description]);
     }
     
@@ -204,10 +200,8 @@
 #pragma mark - Display Beacons
 
 - (void)updateBeacons {
-
-//    CLBeacon __block *beacon = [CLBeacon new];
-
-
+    
+    //Set drawing for each bubble
     [self setDiameter:70.0/2];
     
     __block int counter = 0;
@@ -216,17 +210,41 @@
         
         BubbleObject *bubbleObject = obj;
         float division = (self.view.frame.size.height / ([self.beaconDict count]+1));
-//        NSLog(@"%@ %d %f", bubbleObject.uuid, bubbleObject.position, division);
+        
+        //Add bubble drawing
+        if (!bubbleObject.bubble) {
+            Bubble *drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*bubbleObject.position, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:1 andColor:bubbleObject.color];
+            [bubbleObject setBubble:drawing];
+            [self.view addSubview:bubbleObject.bubble];
+        }else{
+            //update frame
+            float step = mdiameter; //(self.view.frame.size.width / mdiameter);
+            CLBeacon *beacon = bubbleObject.beacon;
+            
+            if (beacon.accuracy > 0) {
+                [UIView animateWithDuration:0.5 animations:^(void) {
+                    [bubbleObject.bubble setFrame:CGRectMake(beacon.accuracy*step*10, division*bubbleObject.position, mdiameter, mdiameter)];
+                }];
+                
+                NSLog(@"%@ %f", bubbleObject.beacon.major, beacon.accuracy*step);
+            }
 
-        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*bubbleObject.position, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:1 andColor:bubbleObject.color];
-        [self.view addSubview:self.drawing];
+        }
+
+       
+    }];
+
+//    CLBeacon __block *beacon = [CLBeacon new];
+
+
+
 //
-//        
-//        
-//        
-//        
-        
-        
+//
+//
+//
+//
+    
+    
 //        float position = self.view.frame.size.height / bubbleObject.position;
         
         
@@ -234,13 +252,10 @@
 //        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, position, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:3 andColor:bubbleObject.color];
 //        [self.view addSubview:self.drawing];
         
-//        [UIView animateWithDuration:0.5 animations:^(void) {
-//            self.drawing.alpha = 0;
-//            [self.drawing removeFromSuperview];
-//        }];
+
         
         
-    }];
+
     
 //    NSLog(@"%@", [self.beaconDict description]);
 //    NSLog(@"%@", [self.colorsWithBeacon description]);
@@ -309,7 +324,7 @@
         [colors addObject:color];
         
     }
-    NSLog(@"colors %@", colors);
+
     return colors;
 }
 

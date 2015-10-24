@@ -47,9 +47,10 @@
     self.utilityManager.delegate = self;
     
     self.beaconDict = [NSMutableDictionary new];
-//    self.colorsWithBeacon = [NSMutableDictionary new];
     self.beaconsArray = [NSMutableArray new];
-//    self.beaconsDictionary = [NSDictionary new];
+    
+    self.colors = [self getColors];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -156,7 +157,7 @@
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
 
-    NSArray *colors = [self getColors];
+    
 
     for (int i=0; i<[beacons count]; i++) {
         
@@ -172,8 +173,11 @@
             [bubbleObject setUuid:[beacon.major stringValue]];
             
             //add color but remove it from the list
-            [bubbleObject setColor:[colors lastObject]];
-            [self.colors removeObject:[colors lastObject]];
+            NSLog(@"%@", [self.colors lastObject]);
+            [bubbleObject setColor:[self.colors lastObject]];
+            [self.colors removeObject:[self.colors lastObject]];
+            
+            [bubbleObject setPosition:[self.beaconDict count]+1];
             
             //add beacon to dict
             [self.beaconDict setObject:bubbleObject forKey:beacon.major];
@@ -186,7 +190,7 @@
         
         [self setDiameter:35.0];
         
-        NSLog(@"%@", [self.beaconDict description]);
+//        NSLog(@"%@", [self.beaconDict description]);
     }
     
     [self updateBeacons];
@@ -203,19 +207,20 @@
 
 //    CLBeacon __block *beacon = [CLBeacon new];
 
-    float division = self.view.frame.size.height / [self.beaconDict count]+1;
+
     [self setDiameter:70.0/2];
     
     __block int counter = 0;
     [self.beaconDict enumerateKeysAndObjectsUsingBlock: ^(id key, id obj, BOOL *stop) {
-//        counter ++;
-//        
-//        BubbleObject *bubbleObject = obj;
-//        NSLog(@"%@ %f", bubbleObject.uuid, self.view.frame.size.height/counter);
-//        
-//        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*counter, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:3 andColor:bubbleObject.color];
-//        [self.view addSubview:self.drawing];
-//        
+        counter ++;
+        
+        BubbleObject *bubbleObject = obj;
+        float division = (self.view.frame.size.height / ([self.beaconDict count]+1));
+//        NSLog(@"%@ %d %f", bubbleObject.uuid, bubbleObject.position, division);
+
+        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*bubbleObject.position, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:1 andColor:bubbleObject.color];
+        [self.view addSubview:self.drawing];
+//
 //        
 //        
 //        
@@ -292,7 +297,7 @@
     return mdiameter;
 }
 
--(NSArray*)getColors {
+-(NSMutableArray*)getColors {
     NSMutableArray *colors = [NSMutableArray new];
     
     float INCREMENT = 0.1;
@@ -304,7 +309,7 @@
         [colors addObject:color];
         
     }
-    
+    NSLog(@"colors %@", colors);
     return colors;
 }
 

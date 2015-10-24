@@ -208,101 +208,67 @@
     [self.beaconDict enumerateKeysAndObjectsUsingBlock: ^(id key, id obj, BOOL *stop) {
         counter ++;
         
-        BubbleObject *bubbleObject = obj;
+        self.bubbleObject = obj;
         float division = (self.view.frame.size.height / ([self.beaconDict count]+1));
         
         //Add bubble drawing
-        if (!bubbleObject.bubble) {
-            Bubble *drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*bubbleObject.position, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:1 andColor:bubbleObject.color];
-            [bubbleObject setBubble:drawing];
-            [self.view addSubview:bubbleObject.bubble];
+        if (!self.bubbleObject.bubble) {
+            Bubble *drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, division*self.bubbleObject.position, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:1 andColor:self.bubbleObject.color];
+            [self.bubbleObject setBubble:drawing];
+            [self.view addSubview:self.bubbleObject.bubble];
         }else{
             //update frame
-            float step = mdiameter; //(self.view.frame.size.width / mdiameter);
-            CLBeacon *beacon = bubbleObject.beacon;
+            float step = mdiameter;
+            self.beacon = self.bubbleObject.beacon;
             
-            if (beacon.accuracy > 0) {
+            if (self.beacon.accuracy > 0) {
                 [UIView animateWithDuration:2.0 animations:^(void) {
-                    [bubbleObject.bubble setFrame:CGRectMake(beacon.accuracy*step*10, division*bubbleObject.position, mdiameter, mdiameter)];
+                    [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
                 }];
                 
-                NSLog(@"%@ %f", bubbleObject.beacon.major, beacon.accuracy*step);
+//                NSLog(@"%@ %f v %f", bubbleObject.beacon.major, bubbleObject.previousAccuracy, beacon.accuracy);
+                
+                float percentage = fabs(self.bubbleObject.previousAccuracy - self.beacon.accuracy);
+                NSLog(@"%f - %f = %f", self.bubbleObject.previousAccuracy, self.beacon.accuracy, percentage*10);
+                
+                
+                if (percentage*10 >=.2 && percentage*10 <.5) {
+                    [self.bubbleObject.bubble setAlpha:8.0];
+                    [UIView animateWithDuration:.2 animations:^(void) {
+                        [self.bubbleObject.bubble setAlpha:1.0];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                    }];
+                }else if(percentage*10 >.5 && percentage*10 <.7){
+                    [self.bubbleObject.bubble setAlpha:6.0];
+                    [UIView animateWithDuration:.4 animations:^(void) {
+                        [self.bubbleObject.bubble setAlpha:1.0];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                    }];
+                }else if(percentage*10 >.7 && percentage*10 < 1.0){
+                    [self.bubbleObject.bubble setAlpha:4.0];
+                    [UIView animateWithDuration:.5 animations:^(void) {
+                        [self.bubbleObject.bubble setAlpha:1.0];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                    }];
+                }else if (percentage*10 > 1.0){
+                    [self.bubbleObject.bubble setAlpha:0.0];
+                    [UIView animateWithDuration:1.0 animations:^(void) {
+                        [self.bubbleObject.bubble setAlpha:1.0];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                    }];
+                }else{
+                    
+                }
+
+
             }
-
+            
+            self.bubbleObject.previousAccuracy = self.beacon.accuracy;
         }
-
-       
+        
     }];
-
-//    CLBeacon __block *beacon = [CLBeacon new];
-
-
-
-//
-//
-//
-//
-//
-    
-    
-//        float position = self.view.frame.size.height / bubbleObject.position;
-        
-        
-        
-//        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(0, position, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:3 andColor:bubbleObject.color];
-//        [self.view addSubview:self.drawing];
-        
-
-        
-        
-
-    
-//    NSLog(@"%@", [self.beaconDict description]);
-//    NSLog(@"%@", [self.colorsWithBeacon description]);
-    
-//    int __block counter = 0;
-//    [self.beaconDict enumerateKeysAndObjectsUsingBlock: ^(id key, id obj, BOOL *stop) {
-//        counter ++;
-//        beacon = obj;
-//        
-//        [self setDiameter:70.0/2];
-//        
-//        float locationY = self.view.frame.size.height/(counter);
-//        NSLog(@"position %f counter %d count %d", locationY, counter, [self.beaconsArray count]);
-//        float step = (self.view.frame.size.width / mdiameter);
-//        
-//        float distance = beacon.accuracy*30;
-//
-//        float newX = (distance * step);
-//        NSLog(@"#%@ distance: %f newX %f step %f", beacon.major, beacon.accuracy, newX, step);
-//        self.drawing = [[Bubble alloc] initWithFrame:CGRectMake(newX, locationY, mdiameter, mdiameter) andDiameter:mdiameter andLineWidth:lWidth andColor:self.colorsWithBeacon[beacon.major]];
-//
-//        [self.view addSubview:self.drawing];
-//        
-//        self.drawing.alpha = 0;
-//        [UIView animateWithDuration:0.5 animations:^(void) {
-//            
-//            self.drawing.alpha = 1;
-//        
-//        } completion:^(BOOL finished) {
-//            [UIView animateWithDuration:1.0 animations:^{
-//                
-//                self.drawing.alpha = 0;
-//                
-//            } completion:^(BOOL finished) {
-//                [self.drawing removeFromSuperview];
-//            }];
-//        }];
-//        
-////        [UIView animateWithDuration:beacon.accuracy*70 animations:^(void) {
-////            self.drawing.transform = CGAffineTransformMakeScale(4.5, 4.5);
-////            
-////        }];
-//        
-//    }];
     
 }
-
 
 -(void)setDiameter:(double)dmeter{
     mdiameter = dmeter;

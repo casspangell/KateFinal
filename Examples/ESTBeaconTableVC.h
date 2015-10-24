@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <EstimoteSDK/EstimoteSDK.h>
 #import "Bubble.h"
+#import "BubbleObject.h"
 
 typedef enum : int
 {
@@ -25,6 +26,8 @@ typedef enum : int
 @property NSMutableDictionary *beaconDict;
 @property Bubble *drawing;
 @property NSMutableArray *colors;
+@property CLBeacon *beacon;
+@property BubbleObject *bubbleObject;
 
 @property (nonatomic, copy)     void (^completion)(CLBeacon *);
 @property (nonatomic, assign)   ESTScanType scanType;

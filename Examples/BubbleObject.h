@@ -17,5 +17,6 @@
 @property UIColor *color;
 @property CLBeacon *beacon;
 @property int position;
+@property CLLocationAccuracy previousAccuracy;
 
 @end

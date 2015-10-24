@@ -222,7 +222,7 @@
             CLBeacon *beacon = bubbleObject.beacon;
             
             if (beacon.accuracy > 0) {
-                [UIView animateWithDuration:0.5 animations:^(void) {
+                [UIView animateWithDuration:2.0 animations:^(void) {
                     [bubbleObject.bubble setFrame:CGRectMake(beacon.accuracy*step*10, division*bubbleObject.position, mdiameter, mdiameter)];
                 }];
                 

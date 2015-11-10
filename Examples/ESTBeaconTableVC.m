@@ -171,7 +171,7 @@
             [bubbleObject setUuid:[beacon.major stringValue]];
             
             //add color but remove it from the list
-            NSLog(@"%@", [self.colors lastObject]);
+//            NSLog(@"%@", [self.colors lastObject]);
             [bubbleObject setColor:[self.colors lastObject]];
             [self.colors removeObject:[self.colors lastObject]];
             
@@ -186,7 +186,7 @@
             [self.beaconDict setObject:bubbleObject forKey:beacon.major];
         }
         
-//        NSLog(@"%@", [self.beaconDict description]);
+        NSLog(@"%@", [self.beaconDict description]);
     }
     
     [self updateBeacons];
@@ -280,7 +280,7 @@
 
 -(NSMutableArray*)getColors {
     NSMutableArray *colors = [NSMutableArray new];
-    
+   
     float INCREMENT = 0.1;
     for (float hue = 0.0; hue < 1.0; hue += INCREMENT) {
         UIColor *color = [UIColor colorWithHue:hue
@@ -290,7 +290,7 @@
         [colors addObject:color];
         
     }
-
+ NSLog(@"%@", colors);
     return colors;
 }
 

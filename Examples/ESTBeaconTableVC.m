@@ -36,7 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor blackColor]];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     [self.navigationController setNavigationBarHidden:YES];
     
@@ -88,7 +88,7 @@
         [self.beaconManager requestAlwaysAuthorization];
         [self.beaconManager startRangingBeaconsInRegion:self.region];
     }
-    else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusAuthorized)
+    else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways)
     {
         [self.beaconManager startRangingBeaconsInRegion:self.region];
     }
@@ -171,7 +171,7 @@
             [bubbleObject setUuid:[beacon.major stringValue]];
             
             //add color but remove it from the list
-//            NSLog(@"%@", [self.colors lastObject]);
+            NSLog(@"%@", [self.colors lastObject]);
             [bubbleObject setColor:[self.colors lastObject]];
             [self.colors removeObject:[self.colors lastObject]];
             
@@ -229,8 +229,8 @@
 //                NSLog(@"%@ %f v %f", bubbleObject.beacon.major, bubbleObject.previousAccuracy, beacon.accuracy);
                 
                 float percentage = fabs(self.bubbleObject.previousAccuracy - self.beacon.accuracy);
-                NSLog(@"%f - %f = %f", self.bubbleObject.previousAccuracy, self.beacon.accuracy, percentage*10);
-                
+//                NSLog(@"%f - %f = %f", self.bubbleObject.previousAccuracy, self.beacon.accuracy, percentage*10);
+                NSLog(@"%f", percentage*10);
                 
                 if (percentage*10 >=.2 && percentage*10 <.5) {
                     [self.bubbleObject.bubble setAlpha:8.0];
@@ -265,7 +265,7 @@
             
             self.bubbleObject.previousAccuracy = self.beacon.accuracy;
         }
-        
+        NSLog(@"%d", counter);
     }];
     
 }

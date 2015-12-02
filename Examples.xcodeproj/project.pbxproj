@@ -8,31 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		894544C01BD83628002C3D28 /* BubbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 894544BF1BD83628002C3D28 /* BubbleObject.m */; };
+		894BB5DE1C0F8577000550A0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894BB5DD1C0F8577000550A0 /* Launch Screen.storyboard */; };
 		8965DAD21B4CF007007BEEB4 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965DAD11B4CF007007BEEB4 /* Bubble.m */; };
-		89D3B61F1BD71FD400F83912 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D3B61E1BD71FD400F83912 /* Launch Screen.storyboard */; };
-		952B14901AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 952B148E1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m */; };
-		952B14911AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952B148F1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib */; };
-		952CEA5C1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CEA5A1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m */; };
-		952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */; };
-		954111B81AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */; };
-		954111B91AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */; };
-		954AF5861AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954AF5841AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m */; };
-		954AF5871AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954AF5851AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib */; };
-		956A942A1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */; };
-		956A942B1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */; };
-		956C575F1AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C57541AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m */; };
-		956C57601AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C57551AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib */; };
-		956C57611AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C57571AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m */; };
-		956C57621AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C57581AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib */; };
-		956C57631AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C575A1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m */; };
-		956C57641AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C575B1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib */; };
-		956C57651AA8AAC900B468D4 /* ESTTemperatureDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C575D1AA8AAC900B468D4 /* ESTTemperatureDemoVC.m */; };
-		956C57661AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C575E1AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib */; };
-		95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */; };
 		95B084531AA9229D007EA98D /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D588B51AA70CFB0093D178 /* EstimoteSDK.framework */; };
-		95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */; };
-		A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */; };
-		A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */; };
 		AC39C3BE18D72A6F00B38212 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3BD18D72A6F00B38212 /* Foundation.framework */; };
 		AC39C3C018D72A6F00B38212 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3BF18D72A6F00B38212 /* CoreGraphics.framework */; };
 		AC39C3C218D72A6F00B38212 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3C118D72A6F00B38212 /* UIKit.framework */; };
@@ -43,7 +21,6 @@
 		AC39C3D618D72A6F00B38212 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC39C3D518D72A6F00B38212 /* Images.xcassets */; };
 		AC39C3F418D72BA700B38212 /* ESTBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3F318D72BA700B38212 /* ESTBeaconTableVC.m */; };
 		AC39C3F818D7319500B38212 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3F718D7319500B38212 /* SystemConfiguration.framework */; };
-		AC39C3FE18D73DCB00B38212 /* ESTDistanceDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3FD18D73DCB00B38212 /* ESTDistanceDemoVC.m */; };
 		ACA6655EE0BFB26D2FF44D03 /* libPods-Examples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 410712ABE0120E52ADE46AB4 /* libPods-Examples.a */; };
 /* End PBXBuildFile section */
 
@@ -51,43 +28,10 @@
 		410712ABE0120E52ADE46AB4 /* libPods-Examples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Examples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894544BE1BD83628002C3D28 /* BubbleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleObject.h; sourceTree = "<group>"; };
 		894544BF1BD83628002C3D28 /* BubbleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleObject.m; sourceTree = "<group>"; };
+		894BB5DD1C0F8577000550A0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8965DAD01B4CF007007BEEB4 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
 		8965DAD11B4CF007007BEEB4 /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
-		89D3B61E1BD71FD400F83912 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		952B148D1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdaterRemoteDemoVC.h; sourceTree = "<group>"; };
-		952B148E1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBulkUpdaterRemoteDemoVC.m; sourceTree = "<group>"; };
-		952B148F1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBulkUpdaterRemoteDemoVC.xib; sourceTree = "<group>"; };
-		952CEA591A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDetailsDemoVC.h; sourceTree = "<group>"; };
-		952CEA5A1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBeaconDetailsDemoVC.m; sourceTree = "<group>"; };
-		952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBeaconDetailsDemoVC.xib; sourceTree = "<group>"; };
-		954111B51AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdaterDemoVC.h; sourceTree = "<group>"; };
-		954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBulkUpdaterDemoVC.m; sourceTree = "<group>"; };
-		954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBulkUpdaterDemoVC.xib; sourceTree = "<group>"; };
-		954AF5831AE9775D0028C914 /* ESTVirtualBeaconDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTVirtualBeaconDemoVC.h; sourceTree = "<group>"; };
-		954AF5841AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTVirtualBeaconDemoVC.m; sourceTree = "<group>"; };
-		954AF5851AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTVirtualBeaconDemoVC.xib; sourceTree = "<group>"; };
-		956A94271AD7D2B100FC0FFA /* ESTSendGPSDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTSendGPSDemoVC.h; sourceTree = "<group>"; };
-		956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTSendGPSDemoVC.m; sourceTree = "<group>"; };
-		956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTSendGPSDemoVC.xib; sourceTree = "<group>"; };
-		956C57531AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionDetectionDemoVC.h; sourceTree = "<group>"; };
-		956C57541AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionDetectionDemoVC.m; sourceTree = "<group>"; };
-		956C57551AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionDetectionDemoVC.xib; sourceTree = "<group>"; };
-		956C57561AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionUUIDDemoVC.h; sourceTree = "<group>"; };
-		956C57571AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionUUIDDemoVC.m; sourceTree = "<group>"; };
-		956C57581AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionUUIDDemoVC.xib; sourceTree = "<group>"; };
-		956C57591AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionUUIDSettingsDemoVC.h; sourceTree = "<group>"; };
-		956C575A1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionUUIDSettingsDemoVC.m; sourceTree = "<group>"; };
-		956C575B1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionUUIDSettingsDemoVC.xib; sourceTree = "<group>"; };
-		956C575C1AA8AAC900B468D4 /* ESTTemperatureDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTemperatureDemoVC.h; sourceTree = "<group>"; };
-		956C575D1AA8AAC900B468D4 /* ESTTemperatureDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTTemperatureDemoVC.m; sourceTree = "<group>"; };
-		956C575E1AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTTemperatureDemoVC.xib; sourceTree = "<group>"; };
-		95A43D751940CDDB004D81E3 /* ESTCloudBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCloudBeaconTableVC.h; sourceTree = "<group>"; };
-		95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCloudBeaconTableVC.m; sourceTree = "<group>"; };
-		95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTCloudBeaconTableVC.xib; sourceTree = "<group>"; };
 		95D588B51AA70CFB0093D178 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
-		A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTUpdateFirmwareDemoVC.h; sourceTree = "<group>"; };
-		A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTUpdateFirmwareDemoVC.m; sourceTree = "<group>"; };
-		A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTUpdateFirmwareDemoVC.xib; sourceTree = "<group>"; };
 		A154DE5518E0395F00734BD6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		AC39C3BA18D72A6F00B38212 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC39C3BD18D72A6F00B38212 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,8 +50,6 @@
 		AC39C3F218D72BA700B38212 /* ESTBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconTableVC.h; sourceTree = "<group>"; };
 		AC39C3F318D72BA700B38212 /* ESTBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBeaconTableVC.m; sourceTree = "<group>"; };
 		AC39C3F718D7319500B38212 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AC39C3FC18D73DCB00B38212 /* ESTDistanceDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDistanceDemoVC.h; sourceTree = "<group>"; };
-		AC39C3FD18D73DCB00B38212 /* ESTDistanceDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTDistanceDemoVC.m; sourceTree = "<group>"; };
 		BD3F3BE91F611EFE6A5A60A1 /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
 		CB3CEE7F2E42584AD64D2786 /* Pods-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,50 +71,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		894544C11BD83633002C3D28 /* unused */ = {
-			isa = PBXGroup;
-			children = (
-				952CEA591A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.h */,
-				952CEA5A1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m */,
-				952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */,
-				95A43D751940CDDB004D81E3 /* ESTCloudBeaconTableVC.h */,
-				95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */,
-				95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */,
-				A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */,
-				A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */,
-				A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */,
-				956C57531AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.h */,
-				956C57541AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m */,
-				956C57551AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib */,
-				956C57561AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.h */,
-				956C57571AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m */,
-				956C57581AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib */,
-				956C57591AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.h */,
-				956C575A1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m */,
-				956C575B1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib */,
-				956C575C1AA8AAC900B468D4 /* ESTTemperatureDemoVC.h */,
-				956C575D1AA8AAC900B468D4 /* ESTTemperatureDemoVC.m */,
-				956C575E1AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib */,
-				954111B51AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.h */,
-				954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */,
-				954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */,
-				952B148D1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.h */,
-				952B148E1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m */,
-				952B148F1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib */,
-				956A94271AD7D2B100FC0FFA /* ESTSendGPSDemoVC.h */,
-				956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */,
-				956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */,
-				954AF5831AE9775D0028C914 /* ESTVirtualBeaconDemoVC.h */,
-				954AF5841AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m */,
-				954AF5851AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib */,
-			);
-			name = unused;
-			sourceTree = "<group>";
-		};
 		8965DAD31B4CF15D007BEEB4 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				89D3B61E1BD71FD400F83912 /* Launch Screen.storyboard */,
+				894BB5DD1C0F8577000550A0 /* Launch Screen.storyboard */,
 				8965DAD01B4CF007007BEEB4 /* Bubble.h */,
 				8965DAD11B4CF007007BEEB4 /* Bubble.m */,
 				894544BE1BD83628002C3D28 /* BubbleObject.h */,
@@ -183,8 +85,6 @@
 				AC39C3D318D72A6F00B38212 /* ESTViewController.m */,
 				AC39C3F218D72BA700B38212 /* ESTBeaconTableVC.h */,
 				AC39C3F318D72BA700B38212 /* ESTBeaconTableVC.m */,
-				AC39C3FC18D73DCB00B38212 /* ESTDistanceDemoVC.h */,
-				AC39C3FD18D73DCB00B38212 /* ESTDistanceDemoVC.m */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -235,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				8965DAD31B4CF15D007BEEB4 /* New Group */,
-				894544C11BD83633002C3D28 /* unused */,
 				AC39C3D518D72A6F00B38212 /* Images.xcassets */,
 				AC39C3C418D72A6F00B38212 /* Supporting Files */,
 			);
@@ -265,6 +164,7 @@
 				AC39C3B718D72A6F00B38212 /* Frameworks */,
 				AC39C3B818D72A6F00B38212 /* Resources */,
 				A596AC898D31947888DFFB7E /* Copy Pods Resources */,
+				A9BB9633363DC31B23F57ABB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EST;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = com.estimote;
 				TargetAttributes = {
 					AC39C3B918D72A6F00B38212 = {
@@ -318,20 +218,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */,
-				952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */,
-				954111B91AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib in Resources */,
-				952B14911AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib in Resources */,
-				956C57641AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */,
-				A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */,
-				89D3B61F1BD71FD400F83912 /* Launch Screen.storyboard in Resources */,
-				956C57661AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib in Resources */,
-				954AF5871AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib in Resources */,
-				956C57601AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib in Resources */,
+				894BB5DE1C0F8577000550A0 /* Launch Screen.storyboard in Resources */,
 				AC39C3D618D72A6F00B38212 /* Images.xcassets in Resources */,
 				AC39C3C818D72A6F00B38212 /* InfoPlist.strings in Resources */,
-				956C57621AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib in Resources */,
-				956A942B1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +240,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Examples/Pods-Examples-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9BB9633363DC31B23F57ABB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Examples/Pods-Examples-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BCC635F0BA5604BB5D10C3A0 /* Check Pods Manifest.lock */ = {
@@ -375,24 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				952B14901AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m in Sources */,
-				956C57631AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m in Sources */,
-				954AF5861AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m in Sources */,
-				956C575F1AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m in Sources */,
 				AC39C3CA18D72A6F00B38212 /* main.m in Sources */,
 				AC39C3D418D72A6F00B38212 /* ESTViewController.m in Sources */,
-				954111B81AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m in Sources */,
-				95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */,
 				8965DAD21B4CF007007BEEB4 /* Bubble.m in Sources */,
-				AC39C3FE18D73DCB00B38212 /* ESTDistanceDemoVC.m in Sources */,
 				AC39C3F418D72BA700B38212 /* ESTBeaconTableVC.m in Sources */,
-				956C57611AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m in Sources */,
 				894544C01BD83628002C3D28 /* BubbleObject.m in Sources */,
-				956A942A1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m in Sources */,
-				A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */,
-				952CEA5C1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m in Sources */,
 				AC39C3CE18D72A6F00B38212 /* ESTAppDelegate.m in Sources */,
-				956C57651AA8AAC900B468D4 /* ESTTemperatureDemoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +320,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -442,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -474,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -505,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cass.art;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -535,7 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cass.art;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

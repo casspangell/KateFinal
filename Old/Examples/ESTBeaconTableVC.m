@@ -186,7 +186,7 @@
             [self.beaconDict setObject:bubbleObject forKey:beacon.major];
         }
         
-        NSLog(@"%@", [self.beaconDict description]);
+//        NSLog(@"%@", [self.beaconDict description]);
     }
     
     [self updateBeacons];
@@ -200,7 +200,7 @@
 #pragma mark - Display Beacons
 
 - (void)updateBeacons {
-    
+    int power = 10;
     //Set drawing for each bubble
     [self setDiameter:70.0/2];
     
@@ -223,38 +223,38 @@
             
             if (self.beacon.accuracy > 0) {
                 [UIView animateWithDuration:2.0 animations:^(void) {
-                    [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                    [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*power, division*self.bubbleObject.position, mdiameter, mdiameter)];
                 }];
                 
 //                NSLog(@"%@ %f v %f", bubbleObject.beacon.major, bubbleObject.previousAccuracy, beacon.accuracy);
                 
                 float percentage = fabs(self.bubbleObject.previousAccuracy - self.beacon.accuracy);
 //                NSLog(@"%f - %f = %f", self.bubbleObject.previousAccuracy, self.beacon.accuracy, percentage*10);
-                NSLog(@"%f", percentage*10);
+                NSLog(@"%d - %f", self.bubbleObject.position, percentage*power);
                 
-                if (percentage*10 >=.2 && percentage*10 <.5) {
+                if (percentage*power >=.2 && percentage*power <.5) {
                     [self.bubbleObject.bubble setAlpha:8.0];
                     [UIView animateWithDuration:.2 animations:^(void) {
                         [self.bubbleObject.bubble setAlpha:1.0];
-                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*power, division*self.bubbleObject.position, mdiameter, mdiameter)];
                     }];
-                }else if(percentage*10 >.5 && percentage*10 <.7){
+                }else if(percentage*power >.5 && percentage*power <.7){
                     [self.bubbleObject.bubble setAlpha:6.0];
                     [UIView animateWithDuration:.4 animations:^(void) {
                         [self.bubbleObject.bubble setAlpha:1.0];
-                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*power, division*self.bubbleObject.position, mdiameter, mdiameter)];
                     }];
-                }else if(percentage*10 >.7 && percentage*10 < 1.0){
+                }else if(percentage*power >.7 && percentage*power < 1.0){
                     [self.bubbleObject.bubble setAlpha:4.0];
                     [UIView animateWithDuration:.5 animations:^(void) {
                         [self.bubbleObject.bubble setAlpha:1.0];
-                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*power, division*self.bubbleObject.position, mdiameter, mdiameter)];
                     }];
-                }else if (percentage*10 > 1.0){
+                }else if (percentage*power > 1.0){
                     [self.bubbleObject.bubble setAlpha:0.0];
                     [UIView animateWithDuration:1.0 animations:^(void) {
                         [self.bubbleObject.bubble setAlpha:1.0];
-                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*10, division*self.bubbleObject.position, mdiameter, mdiameter)];
+                        [self.bubbleObject.bubble setFrame:CGRectMake(self.beacon.accuracy*step*power, division*self.bubbleObject.position, mdiameter, mdiameter)];
                     }];
                 }else{
                     
@@ -265,7 +265,7 @@
             
             self.bubbleObject.previousAccuracy = self.beacon.accuracy;
         }
-        NSLog(@"%d", counter);
+//        NSLog(@"%d", counter);
     }];
     
 }
